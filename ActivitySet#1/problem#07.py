@@ -1,5 +1,14 @@
-def new_func():
-    text = "X-DSPAM-Confidence:    0.8475"
-    print(float(text[text.find('0'):]))
+# Use the file name mbox-short.txt as the file name
+fname = raw_input("Enter file name: ")
+fh = open(fname)
+count = 0
+total = 0
+for line in fh:
+    if not line.startswith("X-DSPAM-Confidence:") : continue
+    t=line.find("0")
+    number= float(line[t:])
+    count = count + 1
+    total = total + number
 
-new_func()
+average = total/count
+print ("Average spam confidence:",average)
