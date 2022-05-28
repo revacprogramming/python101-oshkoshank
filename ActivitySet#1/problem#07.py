@@ -1,14 +1,11 @@
-# Use the file name mbox-short.txt as the file name
-fname = raw_input("Enter file name: ")
-fh = open(fname)
+file = input("Enter the file name: ")
+fh = open(file,'r')
 count = 0
 total = 0
-for line in fh:
-    if not line.startswith("X-DSPAM-Confidence:") : continue
-    t=line.find("0")
-    number= float(line[t:])
-    count = count + 1
-    total = total + number
-
-average = total/count
-print ("Average spam confidence:",average)
+for l in fh:
+    if(l.startswith("X-DSPAM-Confidence:")):
+        s_i = l.find(" ")
+        num = float(l[s_i+1:])
+        total += num
+        count += 1
+print("The average value is",(total/count))
