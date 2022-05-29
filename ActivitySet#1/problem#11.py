@@ -7,9 +7,9 @@ for l in file:
         m = l.split(" ")[1]
         m = m.rstrip()
         mail[m] =( mail.get(m,0)+1)
-max = 0
+count = 0
 for i in mail:
-    if (mail[i]) > max:
-        max = mail[i]
+    if(mail[i] > count):
+        count = mail[i]
         email = i
-print(email,max)
+print(email,count)
