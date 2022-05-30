@@ -1,7 +1,6 @@
 file = input("Enter the file name: ")
 fh = open(file,'r')
-count = 0
-total = 0
+count,total = 0,0
 for l in fh:
     if(l.startswith("X-DSPAM-Confidence:")):
         s_i = l.find(" ")
