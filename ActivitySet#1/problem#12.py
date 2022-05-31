@@ -13,5 +13,6 @@ for l in fh:
         details[hr] = details.get(hr,0)+1
 lst = list(details.items())
 lst.sort()
-for t in lst:
-    print(t[0], t[1])
+print(lst)
+"""for t in lst:
+    print(t[0], t[1])"""
