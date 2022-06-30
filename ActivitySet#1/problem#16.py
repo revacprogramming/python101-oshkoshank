@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
@@ -18,8 +18,3 @@ for i in range(count):
     html = urlopen(link).read()
     soup = BeautifulSoup(html,"html.parser")
     href = soup('a')
-=======
-# Databases
-# https://www.py4e.com/lessons/database
-Def main()
->>>>>>> 0a1408adc11339b793153d649907af69b9cbd6ab
