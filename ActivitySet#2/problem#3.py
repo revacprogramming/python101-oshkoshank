@@ -1,16 +1,20 @@
-
+import re
 
 def get_cs():
-    """get string input"""
+    while True:
+        s = input("Enter the string: ")
+        if(s == ""):
+            break;
+        else:
+            return s;
 
 
 def cs_to_lot(cs):
-    """convert connected string to list of strings"""
-
+    li = list(cs.split("=").split(" "))
+    return li
 
 def main():
     cs = get_cs()
-
     lot = cs_to_lot(cs)
     print(lot)
 
