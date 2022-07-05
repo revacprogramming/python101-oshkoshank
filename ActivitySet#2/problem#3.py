@@ -1,16 +1,12 @@
 import re
 
 def get_cs():
-    while True:
-        s = input("Enter the string: ")
-        if(s == ""):
-            break;
-        else:
-            return s;
-
+    s = input("Enter the string: ");
+    return s;
 
 def cs_to_lot(cs):
-    li = list(cs.split("=").split(" "))
+    li = list(cs.split(";"));
+    
     return li
 
 def main():
