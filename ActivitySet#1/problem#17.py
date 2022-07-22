@@ -19,7 +19,6 @@ for item in lst:
     t = item.find ('count').text
     total = total + float (t)
     
+
 print ('Count:', count)
 print ('Sum:' , total)
-
-

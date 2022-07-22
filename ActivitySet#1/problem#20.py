@@ -25,5 +25,6 @@ for tItem in lPeople:
 c.execute("SELECT hex(name || age) AS X FROM Ages ORDER BY X")
 print(c.fetchall())
 
+
 conn.commit()
 conn.close()
